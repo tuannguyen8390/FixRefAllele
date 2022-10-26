@@ -1,4 +1,5 @@
-### FixRef.py: Fix reference allele in vcf file
+### FixRef.py: Fix reference allele in vcf file 
+# Forked & edited by Tuan Nguyen (tuan.nguyen@agriculture.vic.gov.au)
 
 ```
 usage: FixRef.py [-h] -f REF -v VCF -o OUTPUT
@@ -37,6 +38,8 @@ The program was initially developped to correct allele issues when merging multi
 
 #### Requirement:
 python 2.7 and modules argparse, pyfaidx, os and re
+26.10.22 | add on script supporting python 3.8 and modules argparse, pyfaidx, os and re
+
 
 #### Important notes:
 Please note that the program assumes all the variants were called using the same reference sequncing, and it won't fix strand issues, that is, if the VCF file used reverse-complement strand to call variant, the problem won't be fixed and the variant will be removed from the output VCF file if none of the REF or ALT alleles match the reference sequence.
